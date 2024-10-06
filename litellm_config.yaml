@@ -1,0 +1,13 @@
+model_list:
+  - model_name: gossiping-monster
+    litellm_params:
+      model: azure/gossiping-monster  # Refers to the model name set in .env (note: use correct env variable)
+      api_base: os.environ/AZURE_API_BASE  # Uses the Azure API base from the .env file
+      api_key: os.environ/AZURE_API_KEY  # Uses the Azure API key from the .env file
+      api_version: "2023-03-15-preview"  # Uses the Azure API version from the .env file
+  - model_name: embedding-monster
+    litellm_params:
+      model: azure/embedding-monster  # Refers to the embedding model name set in .env (note: use correct env variable)
+      api_base: os.environ/AZURE_API_BASE  # Uses the Azure API base from the .env file
+      api_key: os.environ/AZURE_API_KEY  # Uses the Azure API key from the .env file
+      api_version: "2023-05-15"  # A hardcoded API version
